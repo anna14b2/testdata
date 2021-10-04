@@ -10,21 +10,29 @@ const options = {
     "x-apikey": "615322a8dfa7346e2f96912a",
   },
 };
+
+// .catch((err) => {
+//     console.error(err);
+//   });
+
 fetch(url, options)
   .then((response) => {
-    console.log(response);
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
+    return response.json();
   })
   .then((data) => {
-    //We have the data
-    console.log(data);
+    // we have the data
     getIcelandPlaces(data);
   })
-  .catch((err) => {
-    console.error(err);
+  .catch((e) => {
+    // Something went wrong
+    console.error("An error occured:", e.message);
   });
 
-function getIcelandPlaces(data) {
-  data.forEach(showPlace);
+function getIcelandPlaces(place) {
+  place.forEach(showPlace);
 }
 
 function showPlace(place) {
