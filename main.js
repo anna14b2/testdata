@@ -1,8 +1,8 @@
 const urlParams = new URLSearchParams(window.location.search);
-const spirit = urlParams.get("location");
-console.log(location);
+const locations = urlParams.get("locations");
+console.log(locations);
 
-const url = `https://kea2semester-c983.restdb.io/rest/iceland? q={"location" : {"$in" : ["${location}"]}}`;
+const url = `https://kea2semester-c983.restdb.io/rest/iceland?q={"locations" : {"$in" : ["${locations}"]}}`;
 console.log(url);
 
 const options = {
@@ -20,14 +20,14 @@ fetch(url, options)
   })
   .then((data) => {
     // we have the data
-    getIcelandPlaces(data);
+    gotData(data);
   })
   .catch((err) => {
     console.error(err);
   });
 
-function getIcelandPlaces(place) {
-  place.forEach(showPlace);
+function gotData(data) {
+  data.forEach(showPlace);
 }
 
 function showPlace(place) {
@@ -37,10 +37,10 @@ function showPlace(place) {
   // clone the template
   const copy = template.cloneNode(true);
   // make the place page match the place we are gonna click
-  copy
-    .querySelector("a")
-    .setAttribute("href", "place.html?place=" + iceland.Name);
-  console.log(iceland.Name);
+  //   copy
+  //     .querySelector("a")
+  //     .setAttribute("href", "place.html?place=" + iceland.Name);
+  //   console.log(iceland.Name);
   //change dynamic data
   document.querySelector("h2").textContent = iceland.name;
   copy.querySelector("img").setAttribute("src", iceland.img);
