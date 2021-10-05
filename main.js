@@ -37,15 +37,14 @@ function showPlace(place) {
   const template = document.querySelector("#places_template").content;
   // clone the template
   const copy = template.cloneNode(true);
-  // make the place page match the place we are gonna click
-  //   copy
-  //     .querySelector("a")
-  //     .setAttribute("href", "place.html?place=" + iceland.Name);
-  //   console.log(iceland.Name);
+  //make the place page match the place we are gonna click
+  copy
+    .querySelector("a")
+    .setAttribute("href", "place.html?place=" + place.name);
   //change dynamic data
-  document.querySelector("h2").textContent = iceland.name;
-  copy.querySelector("img").setAttribute("src", iceland.img);
-  copy.querySelector("img").setAttribute("alt", iceland.name);
+  copy.querySelector("h2").textContent = place.name;
+  copy.querySelector("img").setAttribute("src", place.img);
+  copy.querySelector("img").setAttribute("alt", place.name);
   //append it to main
   const elemParent = document.querySelector("main");
   elemParent.appendChild(copy);
