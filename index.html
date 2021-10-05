@@ -9,21 +9,43 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <h1>Take a look</h1>
-      <section class="takealook">
-        <a href="list.html?locations=South"
-          ><img src="img/south-map.jpg" alt="south"
-        /></a>
-        <a href="list.html?locations=North"
-          ><img src="img/tg-northiceland-map.jpg" alt="north"
-        /></a>
-        <a href="list.html?locations=East"
-          ><img src="img/east-map.png" alt="east"
-        /></a>
-        <a href="list.html?locations=West"
-          ><img src="img/Isafjordur.png" alt="west"
-        /></a>
+    <main id="index_main">
+      <section class="page">
+        <h1>Take a look</h1>
+        <section class="takealook">
+          <div class="overlay">
+            <a href="list.html?locations=South"
+              ><img src="img/south1.png" alt="south" class="popup"
+            /></a>
+            <div class="hidden">
+              <strong>Southern</strong><br />Iceland <br />
+            </div>
+          </div>
+          <div class="overlay">
+            <a href="list.html?locations=North"
+              ><img src="img/north1.png" alt="north" class="popup"
+            /></a>
+            <div class="hidden">
+              <strong>Northern</strong><br />Iceland <br />
+            </div>
+          </div>
+          <div class="overlay">
+            <a href="list.html?locations=East"
+              ><img src="img/east1.png" alt="east" class="popup"
+            /></a>
+            <div class="hidden">
+              <strong>Eastern</strong><br />Iceland <br />
+            </div>
+          </div>
+          <div class="overlay">
+            <a href="list.html?locations=West"
+              ><img src="img/west1.png" alt="west" class="popup"
+            /></a>
+            <div class="hidden">
+              <strong>Western</strong><br />Iceland <br />
+            </div>
+          </div>
+        </section>
       </section>
     </main>
     <script src="main.js"></script>
