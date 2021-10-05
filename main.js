@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const locations = urlParams.get("locations");
-console.log(locations);
+//console.log(locations);
 
 const url = `https://kea2semester-c983.restdb.io/rest/iceland?q={"locations" : {"$in" : ["${locations}"]}}`;
 console.log(url);
@@ -22,8 +22,9 @@ fetch(url, options)
     // we have the data
     gotData(data);
   })
-  .catch((err) => {
-    console.error(err);
+  .catch((e) => {
+    // Something went wrong
+    console.error("An error occured:", e.message);
   });
 
 function gotData(data) {
@@ -33,7 +34,7 @@ function gotData(data) {
 function showPlace(place) {
   console.log(place);
   //create templates
-  const template = document.querySelector(".places_template").content;
+  const template = document.querySelector("#places_template").content;
   // clone the template
   const copy = template.cloneNode(true);
   // make the place page match the place we are gonna click
@@ -44,7 +45,7 @@ function showPlace(place) {
   //change dynamic data
   document.querySelector("h2").textContent = iceland.name;
   copy.querySelector("img").setAttribute("src", iceland.img);
-  copy.querySelector("img").setAttribute("alt", iceland.Name);
+  copy.querySelector("img").setAttribute("alt", iceland.name);
   //append it to main
   const elemParent = document.querySelector("main");
   elemParent.appendChild(copy);
