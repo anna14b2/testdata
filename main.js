@@ -41,6 +41,7 @@ function showPlace(place) {
   copy
     .querySelector("a")
     .setAttribute("href", "place.html?place=" + place.name);
+
   //change dynamic data
   copy.querySelector("h2").textContent = place.name;
   copy.querySelector("img").setAttribute("src", place.img);
