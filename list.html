@@ -9,18 +9,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
+    <main class="places_main">
+      <!-- <section class="places_section"> -->
       <template id="places_template">
-        <section class="places_section">
-          <article>
+        <article>
+          <div class="overlay">
             <a href="place.html"
-              ><img src="img/placeholder.webp" alt="Placeholder" />Take a
-              look</a
-            >
-            <h2>Place name</h2>
-          </article>
-        </section>
+              ><img src="img/placeholder.webp" alt="Placeholder" class="popup"
+            /></a>
+            <div class="hidden">
+              <strong>Take a better look</strong>
+            </div>
+          </div>
+          <h2>Place name</h2>
+        </article>
       </template>
+      <!-- </section> -->
     </main>
     <script src="main.js"></script>
   </body>
