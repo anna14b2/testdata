@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,6 +9,20 @@
 img {
   max-width: 100%;
   height: auto;
+}
+
+h1 {
+  font-family: "Cairo", sans-serif;
+  font-size: 3rem;
+}
+h2 {
+  font-family: "Cairo", sans-serif;
+  font-size: 2.3rem;
+}
+
+h3,
+h4 {
+  font-family: "Cairo", sans-serif;
 }
 
 /* INDEX.HTML */
@@ -20,6 +36,17 @@ img {
     display: grid;
     grid-column: 2/3;
   }
+}
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem auto;
+}
+
+.explore h2 {
+  place-self: center;
 }
 
 /*HOVER*/
@@ -71,6 +98,7 @@ img {
   display: grid;
   grid-template-columns: 2fr 1fr;
   margin: 10rem;
+  grid-gap: 2rem;
 }
 
 .theplace article {
