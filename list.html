@@ -9,14 +9,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="places_main">
+    <header>
       <div class="dropdown">
-        <button id="knap"><a href="">Filter</a></button>
+        <button id="knap"><a href="">Filter by location</a></button>
         <div class="dropdown_content">
-          <a href="#"><p>Towns</p></a>
-          <a href="#"><p>Mountains</p></a>
-          <a href="#"><p>Waterfalls</p></a>
+          <a href="list.html?locations=South" class="South"><p>South</p></a>
+          <a href="list.html?locations=West" class="West"><p>West</p></a>
+          <a href="list.html?locations=North" class="North"><p>North</p></a>
+          <a href="list.html?locations=East" class="East"><p>East</p></a>
         </div>
+      </div>
+      <div class="dropdown">
+        <button id="knap"><a href="">Sort by</a></button>
+        <div class="dropdown_content">
+          <a href="" class="Towns"><p>Towns</p></a>
+          <a href="" class="Waterfalls"><p>Waterfalls</p></a>
+          <a href="" class="Mountains"><p>Mountains</p></a>
+        </div>
+      </div>
+    </header>
+    <main class="places_main">
       <!-- <section class="places_section"> -->
       <template id="places_template">
         <article>

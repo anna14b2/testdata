@@ -50,3 +50,14 @@ function showPlace(place) {
   const elemParent = document.querySelector("main");
   elemParent.appendChild(copy);
 }
+
+//FILTER
+// const waterfall = document.querySelector("#waterfalls");
+// function clickWaterfalls() {
+//   function clickWaterfalls() {
+//     console.log("clickWaterfalls");
+//     this.removeEventListener("mousedown", clickWaterfalls);
+
+// document
+//   .querySelector(".waterfalls")
+//   .setAttribute("url", "list.html?location=" + type + waterfall);

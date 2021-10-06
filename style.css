@@ -111,16 +111,17 @@ h4 {
 .dropdown {
   position: relative;
   display: inline-block;
+  margin: 5rem;
 }
 
 .dropdown #knap {
-  margin: 0;
   padding: 1rem 2rem;
   box-shadow: 2px #000;
 }
 
 .dropdown_button {
   padding: 1rem;
+  margin: 2rem;
   background-color: lightgrey;
   color: black;
   padding: 2rem;
